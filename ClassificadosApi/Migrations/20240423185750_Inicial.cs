@@ -19,7 +19,7 @@ namespace ClassificadosApi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Titulo = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
-                    Data = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

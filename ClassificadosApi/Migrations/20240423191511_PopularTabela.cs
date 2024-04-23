@@ -15,7 +15,7 @@ namespace ClassificadosApi.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Classificados",
-                columns: new[] { "Id", "Data", "Descricao", "Titulo" },
+                columns: new[] { "Id", "DataCadastro", "Descricao", "Titulo" },
                 values: new object[,]
                 {
                     { 1, new DateTime(2024, 4, 23, 15, 15, 11, 34, DateTimeKind.Local).AddTicks(4585), "Descricao teste teste teste", "Teste 1" },

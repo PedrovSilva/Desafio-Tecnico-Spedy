@@ -32,7 +32,7 @@ namespace ClassificadosApi.Services
 
         public async Task<IEnumerable<Classificado>> GetClassificadosByData()
         {
-            return await _context.Classificados.OrderByDescending(n=> n.Data).ToListAsync();
+            return await _context.Classificados.OrderByDescending(n=> n.DataCadastro).ToListAsync();
         }
 
         public async Task<IEnumerable<Classificado>> GetClassificadosByTitulo(string titulo)

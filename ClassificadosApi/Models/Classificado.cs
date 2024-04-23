@@ -12,9 +12,9 @@ namespace ClassificadosApi.Models
         [StringLength (250)]
         public string Descricao { get; set; }
         [Required]
-        public  DateTime Data { get; set; }
+        public  DateTime DataCadastro { get; set; }
         public Classificado() {
-            Data = DateTime.Now; // Preenche automaticamente com a data atual do sistema
+            DataCadastro = DateTime.Now; // Preenche automaticamente com a data atual do sistema
         }
     }
 }
