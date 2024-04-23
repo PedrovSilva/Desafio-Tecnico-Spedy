@@ -9,5 +9,23 @@ namespace ClassificadosApi.Context
         { 
         } 
         public DbSet<Classificado> Classificados { get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Classificado>().HasData(
+                new Classificado
+                {
+                    Id = 1,
+                    Titulo = "Teste 1",
+                    Descricao = "Descricao teste teste teste"
+                },
+                new Classificado
+                {
+                    Id = 2,
+                    Titulo = "Teste 2",
+                    Descricao = "teste Descriao"
+                }
+                );
+        }
     }
 }

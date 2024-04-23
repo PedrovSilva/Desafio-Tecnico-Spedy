@@ -14,7 +14,7 @@ namespace ClassificadosApi.Models
         [Required]
         public  DateTime Data { get; set; }
         public Classificado() {
-            Data = DateTime.Today; // Preenche automaticamente com a data atual do sistema
+            Data = DateTime.Now; // Preenche automaticamente com a data atual do sistema
         }
     }
 }
