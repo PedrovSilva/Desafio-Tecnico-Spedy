@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import logo from './assests/logoClassificados.png';
-import { format } from 'date-fns';
 import { Modal, ModalBody, ModalFooter, ModalHeader, Button } from 'reactstrap';
 
 function App() {
