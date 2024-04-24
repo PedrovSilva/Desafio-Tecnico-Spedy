@@ -88,11 +88,11 @@ function App() {
           <div className='form-group'>
           <label>Título</label>
           <br/>
-          <input type='text' className='form-control' name='titulo' onChange={handleChange}/>
+          <input type='text' className='form-control' name='titulo' required onChange={handleChange}/>
           <br/>
           <label>Descrição</label>
           <br/>
-          <textarea className='form-control' name='descricao' onChange={handleChange}/>
+          <textarea className='form-control' name='descricao' required onChange={handleChange}/>
           <br/>
           </div>
         </ModalBody>
