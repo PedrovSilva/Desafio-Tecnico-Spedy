@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import logo from './assests/jornal.png';
+import logo from './assets/jornal.png';
 import { Modal, ModalBody, ModalFooter, ModalHeader, Button } from 'reactstrap';
 
 function App() {
