@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import logo from './assests/logoClassificados.png';
+import logo from './assests/jornal.png';
 import { Modal, ModalBody, ModalFooter, ModalHeader, Button } from 'reactstrap';
 
 function App() {
@@ -76,8 +76,8 @@ function App() {
               <tr key={classificado.id}>
                 <td>{classificado.titulo}</td>
                 <td>{new Date(classificado.dataCadastro).toLocaleString(
-                  'pt-BR', { day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</td>
-                <td>{classificado.descricao}</td>
+                  'pt-BR', { day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</td>{/* Formata a data */}
+                <td>{classificado.descricao}</td> 
               </tr>
             ))}
         </tbody>
