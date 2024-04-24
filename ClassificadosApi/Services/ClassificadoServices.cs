@@ -25,28 +25,11 @@ namespace ClassificadosApi.Services
             return classificado;
         }
 
-        public async Task<IEnumerable<Classificado>> GetClassificados()
-        {
-            return await _context.Classificados.ToListAsync();
-        }
-
         public async Task<IEnumerable<Classificado>> GetClassificadosByData()
         {
             return await _context.Classificados.OrderByDescending(n=> n.DataCadastro).ToListAsync();
         }
 
-        public async Task<IEnumerable<Classificado>> GetClassificadosByTitulo(string titulo)
-        {
-            IEnumerable<Classificado> classificados;
-            if (!string.IsNullOrWhiteSpace(titulo))
-            {
-                classificados = await _context.Classificados.Where(n=> n.Titulo.Contains(titulo)).ToListAsync();
-            }
-            else 
-            { 
-                classificados = await GetClassificados();
-            }
-            return classificados;
-        } 
+        
     }
 }

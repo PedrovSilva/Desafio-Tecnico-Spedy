@@ -15,20 +15,8 @@ namespace ClassificadosApi.Controllers
         {
             _classificadoService = classificadoService;
         }
+       
         [HttpGet]
-        public async Task<ActionResult<IAsyncEnumerable<Classificado>>> GetClassificados()
-        {
-            try
-            {
-                var classificados = await _classificadoService.GetClassificados();
-                return Ok(classificados);
-            }
-            catch 
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Could not find classificados");
-            }
-        }
-        [HttpGet("OrdenadoPorData")]
         public async Task<ActionResult<IAsyncEnumerable<Classificado>>> GetClassificadosByData()
         {
             try

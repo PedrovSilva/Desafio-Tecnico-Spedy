@@ -8,7 +8,7 @@ import { Modal, ModalBody, ModalFooter, ModalHeader, Button } from 'reactstrap';
 function App() {
 
   const baseUrl = `https://localhost:44330/api/classificados`;
-  const getUrl = `https://localhost:44330/api/classificados/ordenadopordata`;
+  
   const [data, setData] = useState([]);
   const [modalIncluir, setModalIncluir] = useState(false);
 
@@ -31,7 +31,7 @@ function App() {
   }
   
   const pedidoGet = async()=> {
-    await axios.get(getUrl)
+    await axios.get(baseUrl)
     .then(response => {
       setData(response.data);
     }).catch(error => {
@@ -92,7 +92,7 @@ function App() {
           <br/>
           <label>Descrição</label>
           <br/>
-          <input type='text' className='form-control' name='descricao' onChange={handleChange}/>
+          <textarea className='form-control' name='descricao' onChange={handleChange}/>
           <br/>
           </div>
         </ModalBody>
