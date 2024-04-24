@@ -9,7 +9,7 @@ namespace ClassificadosApi.Models
         [StringLength(80)]
         public string Titulo { get; set; }
         [Required]
-        [StringLength (250)]
+        [StringLength (2500)]
         public string Descricao { get; set; }
         [Required]
         public  DateTime DataCadastro { get; set; }
