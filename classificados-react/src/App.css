@@ -1,5 +1,5 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-header {
@@ -12,7 +12,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-A
+
 .App-link {
   color: #61dafb;
 }
