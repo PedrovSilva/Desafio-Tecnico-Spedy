@@ -2,7 +2,7 @@
 ## Frontend
 - React 18.2.0
 - ReactStrap 9.2.2
-- Bootstrap 5.3.3
+- BootStrap 5.3.3
 - Node.js 20.12.2
 - Axios 1.6.8
 - VScode
