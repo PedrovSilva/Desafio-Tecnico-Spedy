@@ -1,4 +1,4 @@
-# Tecnologias Ultilizadas 
+# Tecnologias Utilizadas 
 ## Frontend
 - React 18.2.0
 - ReactStrap 9.2.2
