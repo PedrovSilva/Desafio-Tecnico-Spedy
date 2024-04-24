@@ -54,7 +54,7 @@ function App() {
 
   useEffect(()=>{
     pedidoGet();
-  }, data)
+  }, [data])
 
   return (
     <div className="App"> 
@@ -68,7 +68,7 @@ function App() {
         <thead>
           <tr>
             <th>Título</th>
-            <th>Data de Cadastro</th>
+            <th>Data de Publicação</th>
             <th>Descrição</th>
           </tr>
         </thead>
@@ -76,14 +76,15 @@ function App() {
             {data.map(classificado=>(
               <tr key={classificado.id}>
                 <td>{classificado.titulo}</td>
-                <td>{format(new Date(classificado.dataCadastro), 'dd/MM/yyyy HH:mm')}</td>
+                <td>{new Date(classificado.dataCadastro).toLocaleString(
+                  'pt-BR', { day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</td>
                 <td>{classificado.descricao}</td>
               </tr>
             ))}
         </tbody>
       </table>
       <Modal isOpen={modalIncluir}>
-        <ModalHeader>Inserir Classificado</ModalHeader>
+        <ModalHeader>Publicar Classificado</ModalHeader>
         <ModalBody>
           <div className='form-group'>
           <label>Título</label>
